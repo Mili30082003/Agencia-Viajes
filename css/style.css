@@ -9,7 +9,7 @@ nav, header{
     background-color: rgb(5, 5, 134);
     color: white;
 }
-.nav-link {
+.link-nav {
     color: white;
     font-family: "Poppins", serif;
   font-weight: 500;
@@ -215,4 +215,9 @@ nav, header{
   
   .ofertas {
     background-color: #1e377b;
+  }
+
+  footer {
+    background-color: rgba(189, 183, 183, 0.219);
+    color: black;
   }
