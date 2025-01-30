@@ -221,3 +221,14 @@ nav, header{
     background-color: rgba(189, 183, 183, 0.219);
     color: black;
   }
+
+  .grid-producto {
+    width: 80%;
+  }
+
+  .texto-producto p {
+    font-size: 0.95rem;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+  }
+  
