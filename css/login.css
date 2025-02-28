@@ -1,0 +1,97 @@
+/* Importar fuente */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #043476, #0d4975);
+}
+
+/* Contenedor del login */
+.login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+h2 {
+    color: #003580;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+/* Grupo de entrada */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.input-group i {
+    margin-right: 8px;
+    color: #003580;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    border-color: #0071c2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 113, 194, 0.5);
+}
+
+button {
+    background: #0071c2;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #005ba1;
+}
+
+p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+a {
+    color: #0071c2;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
