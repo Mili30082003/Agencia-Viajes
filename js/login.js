@@ -1,30 +1,32 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function login(event) {
-        event.preventDefault(); // Prevenir el envío del formulario
+document.addEventListener("DOMContentLoaded", function() {
+    const loginForm = document.getElementById("loginForm");
 
-        let mail = document.getElementById("mail").value.trim(); // Obtener el correo ingresado
-        let password = document.getElementById("password").value.trim(); // Obtener la contraseña ingresada
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-        // Comprobar si el usuario es un administrador
+        
+        const mail = document.getElementById("mail").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        // Comprobación simple de admin
         if (mail === "admin@admin.com" && password === "1234") {
-            localStorage.setItem("loggedIn", "true"); // Guardar estado de sesión como administrador
-            window.location.href = "Administrador.html"; // Redirigir a la página de administrador
+           localStorage.setItem("usuario", "admin");  // 1 -Guardo estado de sesión
+            alert("Bienvenido, administrador.");
+            window.location.href = "Administrador.html";  // 2 - Redirijo a la página de administrador
             return;
         }
 
-        // Obtener usuarios registrados en localStorage (si existen)
+        // 4 -  Obtengo usuarios registrados desde localStorage
         let users = JSON.parse(localStorage.getItem("users")) || [];
 
-        // Buscar si el usuario ingresado está registrado
+        // Verificar si el usuario existe
         let userExists = users.find(user => user.email === mail && user.password === password);
 
         if (userExists) {
-            localStorage.setItem("loggedIn", "true"); // Guardar estado de sesión
-            window.location.href = "producto.html"; // Redirigir a la página del usuario
-        } else {
+            localStorage.setItem("usuario", userExists.email);  
+            alert(`Bienvenido, ${userExists.email}!`);
+            window.location.href = "producto.html";  
             alert("Usuario no registrado. Por favor, crea una cuenta.");
         }
-    }
-
-    document.getElementById("loginForm").addEventListener("submit", login);
+    });
 });
