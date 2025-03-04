@@ -2,18 +2,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let btnReservar = document.getElementById("btnReservar");
     let reservaForm = document.getElementById("reservaForm");
 
-    // Al hacer clic en el botón "Reservar"
     btnReservar.addEventListener("click", function (event) {
         event.preventDefault();
-        // Mostrar el modal de reserva
+      
         new bootstrap.Modal(document.getElementById("reservaModal")).show();
     });
 
-    // Al enviar el formulario de reserva
     reservaForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        // Obtener los datos del formulario
+       
         let reserva = {
             nombre: document.getElementById("nombre").value,
             email: document.getElementById("email").value,
@@ -23,16 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
             comentarios: document.getElementById("comentarios").value
         };
 
-        // Obtener las reservas guardadas en el LocalStorage
         let reservas = JSON.parse(localStorage.getItem("reservas")) || [];
 
-        // Agregar la nueva reserva a las reservas existentes
         reservas.push(reserva);
 
-        // Guardar las reservas en el LocalStorage
+    
         localStorage.setItem("reservas", JSON.stringify(reservas));
 
-        // Redirigir a la página de reservas
         window.location.href = "reservas.html"; 
     });
 });
