@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400..700&family=Domine:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+nav, header{
+    background-color: rgb(5, 5, 134);
+    color: white;
+}
+.link-nav {
+    color: white;
+    font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.brasil-titulo h2 {
+   font-weight: 800;
+   font-family: "Poppins", serif;
+}
+
+.paquetes h3 {
+    font-weight: 800;
+   font-family: "Poppins", serif;
+   color: blue;
+}
+.paquetes a {
+    font-weight: 600;
+    font-family: "Poppins", serif;
+
+}
+
+.escapadas h3 {
+    font-weight: 800;
+    font-family: "Poppins", serif;
+    color: rgb(227, 192, 52);
+}
+
+.escapadas a {
+    font-weight: 600;
+    font-family: "Poppins", serif;
+    color: white;
+}
+
+.grupales h3 {
+    font-weight: 800;
+    font-family: "Poppins", serif;
+    color: rgb(38, 141, 77);
+}
+
+.grupales a {
+    font-weight: 600;
+    font-family: "Poppins", serif;
+}
+
+.overlay-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15em;
+    
+}
+.destinos {
+    font-weight: 800;
+    font-family: "Poppins", serif;
+
+}
+
+.product {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 3em;
+    border-radius: 10px;
+  }
+  
+ 
+  .product-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5vw;
+    position: relative;
+  }
+  
+  .product-container::-webkit-scrollbar {
+    display: none;
+  }
+  .product-category {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-size: 1.7em;
+  }
+  .product-card {
+    flex: 0 0 auto;
+    width: 280px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product-card:hover .product-thumb {
+    transform: scale(1.1);
+  }
+  
+  .card-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffa500; /* Naranja vibrante */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(255, 165, 0, 0.3);
+  }
+  
+  .product-card:hover .card-btn {
+    opacity: 1;
+    transform: translate(-50%, -5px);
+  }
+  
+  .product-info {
+    padding: 15px;
+    
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .product-brand {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 0 8px;
+    color: #333;
+  }
+  
+  .product-puntaje {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1e377b; /* Azul vibrante */
+  }
+  
+  .product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(30, 55, 123, 0.8); /* Azul semitransparente */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .scroll-btn:hover {
+    background: rgba(30, 55, 123, 1); /* Azul sólido */
+    transform: scale(1.1);
+  }
+  
+  .scroll-btn.left {
+    left: 10px;
+  }
+  
+  .scroll-btn.right {
+    right: 10px;
+  }
+  
+  .ofertas {
+    background-color: #1e377b;
+  }
+
+  footer {
+    background-color: rgba(189, 183, 183, 0.219);
+    color: black;
+  }
+
+  .grid-producto {
+    width: 80%;
+  }
+
+  .texto-producto p {
+    font-size: 0.95rem;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+  }
+  
