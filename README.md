@@ -20,6 +20,7 @@
   - CSS3 (usando Bootstrap para un diseño responsivo)
   - JavaScript (para la interactividad y la manipulación del DOM)
   
+  
 
 
 
