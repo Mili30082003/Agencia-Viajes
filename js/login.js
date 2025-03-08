@@ -4,19 +4,18 @@ document.addEventListener("DOMContentLoaded", function() {
     loginForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
-        
         const mail = document.getElementById("mail").value.trim();
         const password = document.getElementById("password").value.trim();
 
         // Comprobación simple de admin
         if (mail === "admin@admin.com" && password === "1234") {
-           localStorage.setItem("usuario", "admin");  // 1 -Guardo estado de sesión
+            localStorage.setItem("usuario", "admin");  
             alert("Bienvenido, administrador.");
-            window.location.href = "Administrador.html";  // 2 - Redirijo a la página de administrador
+            window.location.href = "Administrador.html";  
             return;
         }
 
-        // 4 -  Obtengo usuarios registrados desde localStorage
+        // Obtener usuarios registrados desde localStorage
         let users = JSON.parse(localStorage.getItem("users")) || [];
 
         // Verificar si el usuario existe
@@ -26,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem("usuario", userExists.email);  
             alert(`Bienvenido, ${userExists.email}!`);
             window.location.href = "producto.html";  
+        } else {
             alert("Usuario no registrado. Por favor, crea una cuenta.");
         }
     });

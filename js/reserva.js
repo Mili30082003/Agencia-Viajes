@@ -4,14 +4,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     btnReservar.addEventListener("click", function (event) {
         event.preventDefault();
-      
-        new bootstrap.Modal(document.getElementById("reservaModal")).show();
+
+        // Verificar si hay un usuario logueado
+        let usuario = localStorage.getItem("usuario");
+
+        if (usuario) {
+            // Si hay usuario, mostrar el modal
+            new bootstrap.Modal(document.getElementById("reservaModal")).show();
+        } else {
+            // Si no hay usuario, alertar y redirigir a la página de inicio de sesión
+            alert("Debes iniciar sesión para hacer una reserva.");
+            window.location.href = "login.html";  
+        }
     });
 
     reservaForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-       
         let reserva = {
             nombre: document.getElementById("nombre").value,
             email: document.getElementById("email").value,
@@ -25,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         reservas.push(reserva);
 
-    
         localStorage.setItem("reservas", JSON.stringify(reservas));
 
         window.location.href = "reservas.html"; 
